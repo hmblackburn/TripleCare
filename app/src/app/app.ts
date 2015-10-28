@@ -1,6 +1,7 @@
 import {App, events, register, routing} from 'platypus';
 import HomeViewControl from '../viewcontrols/home/home.vc';
 
+
 export default class MyApp extends App {
     constructor(router: routing.Router) {
         super();
