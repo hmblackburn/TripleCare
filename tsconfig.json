@@ -16,5 +16,14 @@
         "test/**/*.ts",
         "typings/tsd.d.ts"
     ],
-    "files": []
+    "files": [
+        "typings/tsd.d.ts",
+        "app/src/models/models.d.ts",
+        "app/src/app/app.ts",
+        "app/src/main.ts",
+        "app/src/repositories/base/base.repo.ts",
+        "app/src/services/base/base.svc.ts",
+        "app/src/viewcontrols/base/base.vc.ts",
+        "app/src/viewcontrols/home/home.vc.ts"
+    ]
 }
