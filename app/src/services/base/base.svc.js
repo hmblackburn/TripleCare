@@ -1,7 +1,7 @@
 var platypus_1 = require('platypus');
 var BaseService = (function () {
     function BaseService() {
-        this.host = 'my-host';
+        this.host = 'http://platypisamples.azurewebsites.net/gettingstarted/api';
     }
     BaseService._inject = {
         http: platypus_1.async.Http,
