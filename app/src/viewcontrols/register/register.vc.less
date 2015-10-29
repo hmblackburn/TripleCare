@@ -1,3 +1,134 @@
 [plat-control="register-vc"] {
-	
+/// ====== Variables =======
+/// Colors
+@dark-grey: #7e7e7e;
+@light-grey: #e2e2e5;
+@platypi-orange: #F68A1E;
+
+/// Sizes
+@navbar-height: 3.2em;
+@container-padding: 1em;
+
+/// ====== Base Element Styling =======
+& {
+    #platui > #mixins;
+
+    html {
+        .box-sizing(border-box);
+    }
+
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    /// ====== Basic App Layout =======
+    .app {
+        height: 100%;
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    [plat-control="plat-viewport"] {
+        .calc(height; '100% - @{navbar-height}');
+        .scroll(y);
+    }
+
+    .content-container {
+        height: 100%;
+        width: 100%;
+        .flexbox();
+        .justify-content(center);
+        .align-content(center);
+        .flex-direction(column);
+
+        &.auth-container {
+            width: 70%;
+            max-width: 30em;
+            margin: 0 auto;
+        }
+
+        &.confirmation-container {
+            padding: 0 @container-padding;
+            text-align: center;
+        }
+    }
+
+    .error-message {
+        font-size: 1em;
+        text-align: center;
+        font-weight: bold;
+        color: red;
+    }
+
+    /// ====== Login/Register Layout =======
+    .auth-logo {
+        width: 10em;
+        margin: 0 auto;
+    }
+
+    .auth-input-container {
+        position: relative;
+        background-color: @dark-grey;
+        margin: 3em 0 2em;
+        padding: 1em 2em 2em;
+        .border-radius(10px);
+        @arrow-width: 24px;
+
+        &:before {
+            position: absolute;
+            top: -@arrow-width;
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: (@arrow-width / 1.2) solid transparent;
+            border-bottom: @arrow-width solid @dark-grey;
+            border-right: (@arrow-width / 1.2) solid transparent;
+            .calc(left; '50% - (@{arrow-width} / 2)');
+        }
+
+        .plat-input {
+            width: 100%;
+
+            & > .plat-input-container > input {
+                color: @light-grey;
+                border-bottom-width: 1px;
+                .border-radius(0px);
+            }
+        }
+    }
+
+
+    /// ====== Button Overrides =======
+    .gs-button {
+        margin: 0.5em 0;
+        border-width: 0;
+        text-transform: uppercase;
+
+        &.button-primary {
+            background-color: @platypi-orange;
+
+            &:active {
+                background-color: darken(@platypi-orange, 5%);
+            }
+        }
+
+        &.button-secondary {
+            background-color: @dark-grey;
+            &:active {
+                background-color: darken(@dark-grey, 5%);
+            }
+        }
+    }
+
+    // /// ========= Mixins ===========
+    // .background-cover() {
+    //     background-size: cover;
+    //     background-repeat: no-repeat;
+    //     background-position: 50% 50%;
+    // }
+}	
 }
