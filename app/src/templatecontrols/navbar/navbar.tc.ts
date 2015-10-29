@@ -2,7 +2,7 @@ import {controls, events, register, ui, web} from 'platypus';
 import HomeViewControl from '../../viewcontrols/home/home.vc';
 import CalendarViewControl from '../../viewcontrols/calendar/calendar.vc';
 import ContactViewControl from '../../viewcontrols/contact/contact.vc';
-import LoginViewControl from '../../viewcontrols/login/login.vc';
+import LoginViewControl from '../../viewcontrols/register/register.vc';
 import ServicesViewControl from '../../viewcontrols/services/services.vc';
 import {DrawerController} from 'platypusui';
 
@@ -16,13 +16,18 @@ export default class NavbarTemplateControl extends ui.TemplateControl {
       calView: CalendarViewControl,
       contactView: ContactViewControl,
       servView: ServicesViewControl,
-      loginView:LoginViewControl,
+      loginView: LoginViewControl,
       loggedin: false
     }
 
     initialize(): void {
       this.on('navigated', (ev: events.DispatchEvent, utils: web.UrlUtils) => {
         this.drawerController.control.close();
+        if (utils.pathname.indexOf('/register') === 0){
+          this.context.showNavbar = false;
+        } else {
+          this.context.showNavbar = true;
+        }
       });
     }
 
@@ -31,8 +36,9 @@ export default class NavbarTemplateControl extends ui.TemplateControl {
     }
     logOut(){
       //log user out
-      
     }
+
+
 }
 
 register.control('navbar', NavbarTemplateControl);

@@ -7,7 +7,7 @@ var platypus_1 = require('platypus');
 var home_vc_1 = require('../../viewcontrols/home/home.vc');
 var calendar_vc_1 = require('../../viewcontrols/calendar/calendar.vc');
 var contact_vc_1 = require('../../viewcontrols/contact/contact.vc');
-var login_vc_1 = require('../../viewcontrols/login/login.vc');
+var register_vc_1 = require('../../viewcontrols/register/register.vc');
 var services_vc_1 = require('../../viewcontrols/services/services.vc');
 var NavbarTemplateControl = (function (_super) {
     __extends(NavbarTemplateControl, _super);
@@ -20,7 +20,7 @@ var NavbarTemplateControl = (function (_super) {
             calView: calendar_vc_1.default,
             contactView: contact_vc_1.default,
             servView: services_vc_1.default,
-            loginView: login_vc_1.default,
+            loginView: register_vc_1.default,
             loggedin: false
         };
     }
@@ -28,6 +28,12 @@ var NavbarTemplateControl = (function (_super) {
         var _this = this;
         this.on('navigated', function (ev, utils) {
             _this.drawerController.control.close();
+            if (utils.pathname.indexOf('/register') === 0) {
+                _this.context.showNavbar = false;
+            }
+            else {
+                _this.context.showNavbar = true;
+            }
         });
     };
     NavbarTemplateControl.prototype.toggleLogin = function () {
