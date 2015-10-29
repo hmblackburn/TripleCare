@@ -19,6 +19,8 @@ node_modules
 **/*.css
 **/*.map
 
+npm-debug.log
+
 # Non-essential cordova directories
 cordova/www
 cordova/platforms
