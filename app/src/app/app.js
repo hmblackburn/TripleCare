@@ -16,7 +16,7 @@ var MyApp = (function (_super) {
         _super.call(this);
         router.configure([
             { pattern: '', view: home_vc_1.default },
-            { pattern: 'register', view: register_vc_1.default },
+            { pattern: '/register', view: register_vc_1.default },
             { pattern: '/services', view: services_vc_1.default },
             { pattern: '/contact', view: contact_vc_1.default },
             { pattern: '/login', view: login_vc_1.default },

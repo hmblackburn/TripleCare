@@ -15,7 +15,7 @@ export default class MyApp extends App {
 
         router.configure([
             { pattern: '', view: HomeViewControl },
-            { pattern: 'register', view: RegisterViewControl },
+            { pattern: '/register', view: RegisterViewControl },
             { pattern: '/services', view: ServicesViewControl },
             { pattern: '/contact', view: ContactViewControl },
             { pattern: '/login', view: LoginViewControl },
