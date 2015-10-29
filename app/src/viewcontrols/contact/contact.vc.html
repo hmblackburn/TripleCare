@@ -1,1 +1,9 @@
-<h1>Hello World!</h1>
+
+<div class="image-row">
+	<div class="empty"></div>
+	<div class="login-info col-dsk-12 col-phn-12 flexbox">
+		<plat-input type="text" name="name" placeholder="NAME" plat-bind="getName"></plat-input>
+		<plat-input type="email" name="email" placeholder="EMAIL" plat-bind="getEmail"></plat-input>
+		<plat-button class=" button-neutral sub-button" plat-tap="pushEntry(getName, getEmail)">Submit</plat-button>
+	</div>
+</div>
