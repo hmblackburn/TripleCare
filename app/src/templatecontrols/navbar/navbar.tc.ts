@@ -2,7 +2,7 @@ import {controls, events, register, ui, web} from 'platypus';
 import HomeViewControl from '../../viewcontrols/home/home.vc';
 import CalendarViewControl from '../../viewcontrols/calendar/calendar.vc';
 import ContactViewControl from '../../viewcontrols/contact/contact.vc';
-import LoginViewControl from '../../viewcontrols/register/register.vc';
+import RegisterViewControl from '../../viewcontrols/register/register.vc';
 import ServicesViewControl from '../../viewcontrols/services/services.vc';
 import {DrawerController} from 'platypusui';
 
@@ -16,7 +16,7 @@ export default class NavbarTemplateControl extends ui.TemplateControl {
       calView: CalendarViewControl,
       contactView: ContactViewControl,
       servView: ServicesViewControl,
-      loginView: LoginViewControl,
+      loginView: RegisterViewControl,
       loggedin: false
     }
 
