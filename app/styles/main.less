@@ -1,10 +1,12 @@
 @import '../../node_modules/platypusui/dist/platypus';
 @import '../src/templatecontrols/footer/footer.tc.less';
 @import '../src/templatecontrols/navbar/navbar.tc.less';
+
 @import '../src/viewcontrols/calendar/calendar.vc.less';
 @import '../src/viewcontrols/contact/contact.vc.less';
 @import '../src/viewcontrols/home/home.vc.less';
 @import '../src/viewcontrols/login/login.vc.less';
+@import '../src/viewcontrols/register/register.vc.less';
 @import '../src/viewcontrols/services/services.vc.less';
 
 *{
@@ -16,3 +18,237 @@
     height: 100%;
     width: 100%;
 }
+
+/// ====== Variables =======
+/// Colors
+@dark-grey: #7e7e7e;
+@light-grey: #e2e2e5;
+@platypi-orange: #F68A1E;
+
+/// Sizes
+@navbar-height: 3.2em;
+@container-padding: 1em;
+
+/// ====== Base Element Styling =======
+& {
+    #platui > #mixins;
+
+    html {
+        .box-sizing(border-box);
+    }
+
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    /// ====== Basic App Layout =======
+    .app {
+        height: 100%;
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    [plat-control="plat-viewport"] {
+        .calc(height; '100% - @{navbar-height}');
+        .scroll(y);
+    }
+
+    .content-container {
+        height: 100%;
+        width: 100%;
+        .flexbox();
+        .justify-content(center);
+        .align-content(center);
+        .flex-direction(column);
+
+        &.auth-container {
+            width: 70%;
+            max-width: 30em;
+            margin: 0 auto;
+        }
+
+        &.confirmation-container {
+            padding: 0 @container-padding;
+            text-align: center;
+        }
+    }
+
+    .error-message {
+        font-size: 1em;
+        text-align: center;
+        font-weight: bold;
+        color: red;
+    }
+
+    /// ====== Login/Register Layout =======
+    .auth-logo {
+        width: 10em;
+        margin: 0 auto;
+    }
+
+    .auth-input-container {
+        position: relative;
+        background-color: @dark-grey;
+        margin: 3em 0 2em;
+        padding: 1em 2em 2em;
+        .border-radius(10px);
+        @arrow-width: 24px;
+
+        &:before {
+            position: absolute;
+            top: -@arrow-width;
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: (@arrow-width / 1.2) solid transparent;
+            border-bottom: @arrow-width solid @dark-grey;
+            border-right: (@arrow-width / 1.2) solid transparent;
+            .calc(left; '50% - (@{arrow-width} / 2)');
+        }
+
+        .plat-input {
+            width: 100%;
+
+            & > .plat-input-container > input {
+                color: @light-grey;
+                border-bottom-width: 1px;
+                .border-radius(0px);
+            }
+        }
+    }
+
+    /// ====== Navbar =======
+    .navbar {
+        .flex-vertical-center();
+        .justify-content(flex-end);
+        height: @navbar-height;
+        width: 100%;
+        background-color: @dark-grey;
+        color: #ffffff;
+        padding: 0 @container-padding;
+    }
+
+    .navbar-center {
+        width: 100%;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .navbar-right {
+        width: 30px;
+    }
+
+    .navbar-icon {
+        @icon-color: #ffffff;
+        @icon-gap: 7px;
+        @icon-stroke: 1px;
+        @icon-width: 20px;
+        display: inline-block;
+        position: relative;
+        height: @icon-stroke;
+        width: @icon-width;
+        background-color: @icon-color;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            height: @icon-stroke;
+            width: @icon-width;
+            background-color: @icon-color;
+        }
+
+        &:before {
+            bottom: @icon-gap;
+        }
+
+        &:after {
+            bottom: @icon-gap * 2;
+        }
+    }
+
+    /// ====== Navbar =======
+    .drawer {
+        @text-color: lighten(@dark-grey, 10%);
+        background-color: #ffffff;
+        padding: 0 1.5em;
+
+        .drawer-item {
+            .flex-vertical-center();
+            padding: 0.5em 0;
+            width: 100%;
+            height: @navbar-height;
+            border-bottom: 1px solid @text-color;
+            color: @text-color;
+
+            & > .drawer-icon {
+                height: @navbar-height * 0.6;
+                margin-right: 1em;
+            }
+        }
+    }
+
+    /// ====== Button Overrides =======
+    .gs-button {
+        margin: 0.5em 0;
+        border-width: 0;
+        text-transform: uppercase;
+
+        &.button-primary {
+            background-color: @platypi-orange;
+
+            &:active {
+                background-color: darken(@platypi-orange, 5%);
+            }
+        }
+
+        &.button-secondary {
+            background-color: @dark-grey;
+            &:active {
+                background-color: darken(@dark-grey, 5%);
+            }
+        }
+    }
+
+    /// ========= Product List ===========
+    .product-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        & > li {
+            .product-item-image {
+                height: 30em;
+                width: 100%;
+                .background-cover();
+            }
+
+            .product-item-details {
+                .flex-vertical-center();
+                .justify-content(space-between);
+                padding: 1em @container-padding;
+
+                & > .price {
+                    border: 1px solid @dark-grey;
+                    padding: 0.3em 0.5em;
+                    .border-radius(2px);
+                }
+            }
+        }
+    }
+
+    /// ========= Mixins ===========
+    .background-cover() {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+}
+
+
