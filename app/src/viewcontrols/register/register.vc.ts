@@ -31,4 +31,4 @@ register(): void {
     });
     register.viewControl('register-vc', RegisterViewControl, [UserRepository]);
 }
-}
+
