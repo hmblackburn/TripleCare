@@ -1,0 +1,21 @@
+<nav class="navbar" plat-visibile="{{showNavbar}}">
+  <img src = "../../../images/triplecare_logo_nobck.png" class="logo"/>
+  <ul class="header flexbox">
+    <plat-link plat-options="{view:homeView}"><li class="flexitem">HOME</li></plat-link>
+    <plat-link plat-options="{view:servView}"><li class="flexitem">SERVICES</li><plat-link>
+    <plat-link plat-options="{view:calView}" plat-visibile="{{loggedin}}"><li class="flexitem">CALENDAR</li><plat-link>
+    <plat-link plat-options="{view:contactView}"><li class="flexitem">CONTACT US</li><plat-link>
+    <plat-link plat-options="{view:loginView}" plat-visibile="{{!loggedin}}"><li class="flexitem">LOG IN</li><plat-link>
+    <li plat-tap="logOut()" class="flexitem" plat-visible="{{loggedin}}">LOG OUT</li>
+  </ul>
+</nav>
+<div class="navcontainer">
+  <div class="drawernav hidedrawer">
+    <img src = "../../../images/triplecare_logo_nobck.png" class="logo"/>
+    <plat-drawer-controller class="drawer-controller" plat-name="drawerController">
+      <div class="navbar-icon">
+        <i class="fa fa-bars fa-3x"></i>
+      </div>
+    </plat-drawer-controller>
+  </div>
+</div>
