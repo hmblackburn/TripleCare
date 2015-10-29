@@ -5,6 +5,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var platypus_1 = require('platypus');
 var home_vc_1 = require('../viewcontrols/home/home.vc');
+var register_vc_1 = require('../viewcontrols/register/register.vc');
 var calendar_vc_1 = require('../viewcontrols/calendar/calendar.vc');
 var contact_vc_1 = require('../viewcontrols/contact/contact.vc');
 var login_vc_1 = require('../viewcontrols/login/login.vc');
@@ -15,6 +16,7 @@ var MyApp = (function (_super) {
         _super.call(this);
         router.configure([
             { pattern: '', view: home_vc_1.default },
+            { pattern: 'register', view: register_vc_1.default },
             { pattern: '/services', view: services_vc_1.default },
             { pattern: '/contact', view: contact_vc_1.default },
             { pattern: '/login', view: login_vc_1.default },

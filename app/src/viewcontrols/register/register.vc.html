@@ -1,0 +1,11 @@
+<div class="content-container auth-container">
+    <img src="./images/platypi.png" class="auth-logo" alt="platypi">
+    <div class="auth-input-container">
+        <div class="error-message">{{error}}</div>
+        <plat-input type="email" plat-bind="email" placeholder="Email"></plat-input>
+        <plat-input plat-bind="firstname" placeholder="First"></plat-input>
+        <plat-input plat-bind="lastname" placeholder="Last"></plat-input>
+        <plat-input type="password" plat-bind="password" placeholder="Password"></plat-input>
+    </div>
+    <plat-button class="button-primary gs-button" plat-tap="register">Register</plat-button>
+</div>
