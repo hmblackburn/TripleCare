@@ -29,5 +29,6 @@ register(): void {
     }).catch((error) => {
         this.context.error = error;
     });
+    register.viewControl('register-vc', RegisterViewControl, [UserRepository]);
 }
 }
