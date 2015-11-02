@@ -1,6 +1,6 @@
 <nav class="navbar" plat-visible="{{showNavbar}}">
   <img src = "../../../images/triplecare_logo_nobck.png" class="logo"/>
-  <ul class="header flexbox">
+  <ul class="nav-list flexbox">
     <plat-link plat-options="{view:homeView}"><li class="flexitem">HOME</li></plat-link>
     <plat-link plat-options="{view:servView}"><li class="flexitem">SERVICES</li></plat-link>
     <plat-link plat-options="{view:calView}" plat-visible="{{loggedin}}"><li class="flexitem">CALENDAR</li></plat-link>
@@ -11,11 +11,10 @@
 </nav>
 <div class="navcontainer" plat-visible="{{showNavbar}}">
   <div class="drawernav hidedrawer">
-    <img src = "../../../images/triplecare_logo_nobck.png" class="logo"/>
     <plat-drawer-controller class="drawer-controller" plat-name="drawerController">
       <div class="navbar-icon">
         <i class="fa fa-bars fa-3x"></i>
       </div>
     </plat-drawer-controller>
   </div>
-</div>
+</div
