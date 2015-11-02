@@ -13,6 +13,11 @@ declare module models {
         data?: any;
         errors?: Array<Error>;
     }
+    
+    interface ICarouselItem {
+        imageURL: string;
+        heading?: string;
+    }
 }
 
 declare module contexts {
@@ -28,6 +33,10 @@ declare module contexts {
         email: string;
         password: string;
         error: string;
+    }
+    
+    interface IHome {
+        carouselItems: Array<models.ICarouselItem>;
     }
 }
 
