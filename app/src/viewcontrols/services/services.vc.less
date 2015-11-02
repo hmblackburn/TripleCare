@@ -1,5 +1,5 @@
 [plat-control="services-vc"] {
-	.services-background{
+	.services-page{
 		background-color: lightgray;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -7,17 +7,25 @@
 		background-size: cover;
 		height: 100%;
 		width: 100%;
+		text-align: center;
 	}
+
 	.container{
 		margin-right: 6em;
 		margin-left: 6em;
-		margin-top: 2em;
+		// margin-top: 2em;
 		p{
 			padding-left: 2em;
 		}
 	}
+	.top-services{
+		padding-top: 8em;
+	}
+	.bottom-services{
+		padding-top: 1em;
+	}
 	.services{
-		text-align: center;
+		// text-align: center;
 	}
 	.services-images{
 		height: 104px;
@@ -25,5 +33,10 @@
 		display: inline-block;
 		vertical-align: middle;
 		border: 0;
+		
 	}
+	.services-images:hover{
+			// background: url('/images/greencircle.png');
+			background-color: rgba(255,255,255,0.25);
+		}
 }

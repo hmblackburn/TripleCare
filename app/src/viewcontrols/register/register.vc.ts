@@ -15,7 +15,8 @@ export default class RegisterViewControl extends BaseViewControl {
       lastname: '',
       email: '',
       password: '',
-      error: ''
+      error: '',
+      homeView: HomeViewControl
   }
 
       
