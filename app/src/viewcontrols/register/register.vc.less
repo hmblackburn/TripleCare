@@ -3,7 +3,7 @@
 /// Colors
 @dark-grey: #7e7e7e;
 @light-grey: #e2e2e5;
-@platypi-orange: #F68A1E;
+
 
 /// Sizes
 @navbar-height: 3.2em;
@@ -72,7 +72,7 @@
 
     .auth-input-container {
         position: relative;
-        background-color: @dark-grey;
+        background-color: @light-grey;
         margin: 3em 0 2em;
         padding: 1em 2em 2em;
         .border-radius(10px);
@@ -85,7 +85,7 @@
             width: 0;
             height: 0;
             border-left: (@arrow-width / 1.2) solid transparent;
-            border-bottom: @arrow-width solid @dark-grey;
+            border-bottom: @arrow-width solid @light-grey;
             border-right: (@arrow-width / 1.2) solid transparent;
             .calc(left; '50% - (@{arrow-width} / 2)');
         }
@@ -109,17 +109,17 @@
         text-transform: uppercase;
 
         &.button-primary {
-            background-color: @platypi-orange;
+            background-color: @dark-grey;
 
             &:active {
-                background-color: darken(@platypi-orange, 5%);
+                background-color: darken(@dark-grey, 5%);
             }
         }
 
         &.button-secondary {
-            background-color: @dark-grey;
+            background-color: @light-grey;
             &:active {
-                background-color: darken(@dark-grey, 5%);
+                background-color: darken(@light-grey, 5%);
             }
         }
     }
