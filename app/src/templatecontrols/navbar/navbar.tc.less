@@ -1,4 +1,4 @@
-[plat-control="navbar-vc"] {
+[plat-control="navbar"] {
 
 /// ====== Variables =======
 /// Colors
@@ -7,7 +7,7 @@
 
 @font: 21pt;
 @nav-height: 5em;
-@logo-height:3em;
+@logo-height:6.5em;
 
 
 /// ====== Base Element Styling =======
@@ -32,18 +32,28 @@
 }
 .logo{
 		height:@logo-height;
+		margin-left: 1.5em;
 	}
 .nav-list{
-		display: inline-block;
 		position: relative;
-		height: @nav-height;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: right;
+
+		.flexitem{
+			display: inline-block;
+			margin-left:	1.5em;
+			text-align: center;
+
+		}
+
 	}
 @media (max-width:1000px){
 		div.navcontainer{
 			justify-content: space-between;
 
 			img.logo {
-				display:inline-block;
 				height:@logo-height;
 				display: inline-block;
 
