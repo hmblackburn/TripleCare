@@ -3,8 +3,9 @@
 	<div class="login-info col-dsk-12 col-phn-12 flexbox">
 		<plat-input class="input" type="text" name="name" placeholder="NAME" plat-bind="getName"></plat-input>
 		<plat-input class="input" type="email" name="email" placeholder="EMAIL" plat-bind="getEmail"></plat-input>
+		<plat-input class="input" type="text" name="comment" placeholder="COMMENT" plat-bind="getComment"></plat-input>
 		<br>
-		<plat-button class="button-neutral sub-button" plat-tap="pushEntry(getName, getEmail)">Submit</plat-button>
+		<plat-button class="button-neutral sub-button" plat-tap="pushEntry(getName, getEmail, getComment)">Submit</plat-button>
 	</div>
 </div>
 
