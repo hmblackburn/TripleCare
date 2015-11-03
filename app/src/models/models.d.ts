@@ -33,6 +33,7 @@ declare module contexts {
         email: string;
         password: string;
         error: string;
+        // homeView: any;
     }
     
     interface IHome {
