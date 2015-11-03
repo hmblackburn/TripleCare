@@ -10,6 +10,9 @@ export default class HomeViewControl extends BaseViewControl {
         },
         {
             imageURL: 'images/sun.jpg'
+        },
+        {
+            imageURL: 'images/lawncare.jpg'
         }]
     };
 }
