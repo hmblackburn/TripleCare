@@ -5,7 +5,7 @@
 
 /// Sizes
 
-@font: 21pt;
+@font: 14pt;
 @nav-height: 5em;
 @logo-height:4.5em;
 
@@ -15,11 +15,11 @@
 
 
 /// ====== Basic Navbar Layout =======
+
 .navbar {
 	height:@nav-height;
 	background-color: rgba(255, 255, 255, 0.75);
 	width: 100%;
-	display:flex;
 	align-items: center;
 	box-sizing: inherit;
 	position: fixed;
@@ -29,34 +29,78 @@
 	right:0;
 	z-index: 100;
 }
+@media (min-width: 1001px){
 
-.logo{
-		height:@logo-height;
-		width: 14em;
-		margin-left: 1.5em;
+.drawer{
+	display: none;
+}
+.navbar {
+	display: flex;
+
+}
+	.logo{
+	height:@logo-height;
+	width: 14em;
+	margin-left: 1.5em;
 	}
-.nav-list{
-		position: relative;
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		text-align: right;
+
+	.nav-list{
+	position: relative;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: right;
 
 		.flexitem{
-			display: inline-block;
-			margin-left: 1.5em;
-			// text-align: center;
+		display: inline-block;
+		margin-left: 1em;
+		font-size: @font;
+		font-family: 'Lato';
+		font-style: normal;
+		color: rgba(69, 71, 55, 0.8);
+		font-weight: 900;
+		// text-align: center;
 		}
-
 	}
+}
+
+///////////////////////Drawer and items under 1000px///////////////
 @media (max-width:1000px){
-		div.navcontainer{
-			justify-content: space-between;
 
-			img.logo {
-				height:@logo-height;
+.drawer{
+	display:block;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 100;
+	height: @nav-height;
+	padding:.5em  0em .5em 0em;
+	top:0;
+	left: 0;
+	right:0;
+	position: fixed;
+	box-sizing: inherit;
+}
+.navbar{
+	display: none;
+}
+.logo {
+display:none;
+}
+.flexbox1{
+	justify-content: space-between;
+	display: flex;
+}
+		.mobilelogo{
+height: @logo-height;
+		}
+			.drawerholder{
+
 				display: inline-block;
+				.navbaricon {
 
+				.manipulate{
+
+				}
 			}
 		}
 	}
