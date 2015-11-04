@@ -8,6 +8,23 @@
 @import '../src/viewcontrols/register/register.vc.less';
 @import '../src/viewcontrols/services/services.vc.less';
 
+.app {
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+
+  [plat-control="plat-viewport"] {
+    #platui > #mixins > .calc(height; '100%');
+    #platui > #mixins > .scroll(y);
+  }
+}
+.drawer {
+
+  li {
+    list-style: none;
+  }
+}
+
 // *{
 // 	// background: url('/images/garden.jpg') no-repeat center center;
 // 	-webkit-background-size: cover;

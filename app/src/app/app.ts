@@ -18,7 +18,7 @@ export default class MyApp extends App {
             { pattern: '/register', view: RegisterViewControl },
             { pattern: '/services', view: ServicesViewControl },
             { pattern: '/contact', view: ContactViewControl },
-            { pattern: '/login', view: LoginViewControl },
+          //  { pattern: '/login', view: LoginViewControl },
             { pattern: '/calendar', view: CalendarViewControl }
         ]);
     }
@@ -31,4 +31,3 @@ export default class MyApp extends App {
 register.app('app', MyApp, [
     routing.Router
 ]);
-

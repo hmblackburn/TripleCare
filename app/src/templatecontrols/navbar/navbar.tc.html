@@ -1,20 +1,19 @@
-<div class="navbar row flexbox col-dsk-12 opacity" plat-visible="{{showNavbar}}">
-  <img src = "../../../images/triplecare_logo_nobck.png" class="logo col-offset-dsk-2 col-dsk-2"/>
-    <ul class="nav-list flexbox col-dsk-8">
-      <plat-link plat-options="{view:homeView}"><li class="flexitem">HOME</li></plat-link>
-      <plat-link plat-options="{view:servView}"><li class="flexitem">SERVICES</li></plat-link>
-      <plat-link plat-options="{view:calView}" plat-visible="{{loggedin}}"><li class="flexitem">CALENDAR</li></plat-link>
-      <plat-link plat-options="{view:contactView}"><li class="flexitem">CONTACT US</li></plat-link>
-      <plat-link plat-options="{view:loginView}" plat-visible="{{!loggedin}}"><li class="flexitem">LOG IN</li></plat-link>
-      <li plat-tap="logOut()" class="flexitem" plat-visible="{{loggedin}}">LOG OUT</li>
-    </ul>
-    <div class="navcontainer" plat-visible="{{showNavbar}}">
-      <div class="drawernav hidedrawer">
-        <plat-drawer-controller class="drawer-controller" plat-name="drawerController">
-          <div class="navbar-icon">
-            <i class="fa fa-bars fa-3x"></i>
-          </div>
-        </plat-drawer-controller>
-      </div>
+<div class="drawer flexbox1">
+  <img src = "../../../images/triplecare_logo_nobck.png" class="mobilelogo"/>
+  <plat-drawer-controller plat-name="drawerController" class="drawerholder">
+    <div class="navbaricon" plat-name="burg">
+      <i class="fa fa-bars fa-2x manipulate"></i>
     </div>
+  </plat-drawer-controller>
+</div>
+<div class="navbar row col-dsk-12 opacity" plat-visible="{{showNavbar}}">
+  <img src = "../../../images/triplecare_logo_nobck.png" class="logo col-offset-dsk-2 col-dsk-2"/>
+      <ul class="nav-list flexbox col-dsk-8">
+        <plat-link plat-options="{view:'home-vc'}"><li class="flexitem">HOME</li></plat-link>
+        <plat-link plat-options="{view:'services-vc'}"><li class="flexitem">SERVICES</li></plat-link>
+        <plat-link plat-options="{view:'calendar-vc'}" plat-visible="{{loggedin}}"><li class="flexitem">CALENDAR</li></plat-link>
+        <plat-link plat-options="{view:'contact-vc'}"><li class="flexitem">CONTACT US</li></plat-link>
+        <plat-link plat-options="{view:'register-vc'}" plat-visible="{{!loggedin}}"><li class="flexitem">LOG IN</li></plat-link>
+        <li plat-tap="logOut()" class="flexitem" plat-visible="{{loggedin}}">LOG OUT</li>
+      </ul>
 </div>
