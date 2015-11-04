@@ -4,7 +4,17 @@ import BaseViewControl from '../base/base.vc';
 export default class HomeViewControl extends BaseViewControl {
     templateString: string = require('./home.vc.html');
 
-    context: any = {};
+    context: contexts.IHome = {
+        carouselItems: [{
+            imageURL: 'images/garden.jpg'
+        },
+        {
+            imageURL: 'images/sun.jpg'
+        },
+        {
+            imageURL: 'images/lawncare.jpg'
+        }]
+    };
 }
 
 register.viewControl('home-vc', HomeViewControl);
