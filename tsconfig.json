@@ -30,7 +30,6 @@
         "app/src/viewcontrols/calendar/calendar.vc.ts",
         "app/src/viewcontrols/contact/contact.vc.ts",
         "app/src/viewcontrols/home/home.vc.ts",
-        "app/src/viewcontrols/login/login.vc.ts",
         "app/src/viewcontrols/register/register.vc.ts",
         "app/src/viewcontrols/services/services.vc.ts",
         "app/src/templatecontrols/navbar/navbar.tc.ts"
