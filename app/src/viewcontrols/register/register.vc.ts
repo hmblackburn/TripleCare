@@ -15,15 +15,9 @@ export default class RegisterViewControl extends BaseViewControl {
       lastname: '',
       email: '',
       password: '',
-<<<<<<< HEAD
-      error: '',
-      // homeView: HomeViewControl
-
-=======
       error: ''
->>>>>>> 5aed2c10896279d1c1e48ea7a6085ef8153eac0d
   }
-
+  
 
   register(): void {
       this.context.error = '';
