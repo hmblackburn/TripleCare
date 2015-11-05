@@ -1,3 +1,5 @@
+/// <reference path="../../../../typings/parse/parse.d.ts"/>
+
 import {register} from 'platypus';
 import BaseViewControl from '../base/base.vc';
 
@@ -8,12 +10,12 @@ export default class HomeViewControl extends BaseViewControl {
         carouselItems: [{
             imageURL: 'images/garden.jpg'
         },
-        {
-            imageURL: 'images/sun.jpg'
-        },
-        {
-            imageURL: 'images/lawncare.jpg'
-        }]
+            {
+                imageURL: 'images/sun.jpg'
+            },
+            {
+                imageURL: 'images/lawncare.jpg'
+            }]
     };
 }
 
