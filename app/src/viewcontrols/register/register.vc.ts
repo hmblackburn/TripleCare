@@ -7,10 +7,13 @@ import UserRepository from '../../repositories/user/user.repo';
 
 export default class RegisterViewControl extends BaseViewControl {
     templateString: string = require('./register.vc.html');
-    context = {
+    context: contexts.IRegister = {
+        firstname:'',
+        lastname:'',
+        email:'',
         password: '',
         error: '',
-        username: ''
+        username:''
     }
     
     constructor(private userRepository: UserRepository) {

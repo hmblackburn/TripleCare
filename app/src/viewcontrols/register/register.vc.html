@@ -2,11 +2,13 @@
     <plat-link plat-options="{view: 'home-vc'}"><img src="./images/triplecare_logo_nobck.png" class="auth-logo" alt="triplecare"></plat-link>
     <div class="auth-input-container">
         <div class="error-message">{{error}}</div>
-        <form action="" plat-submit="login()">
+        <form plat-submit="login()">
             <plat-input class="custom-input" type="text" plat-bind="username" placeholder="Username"></plat-input>
             <plat-input class="custom-input" type="password" plat-bind="password" placeholder="Password"></plat-input>
-            <plat-button type="submit" class="button-primary gs-button">LOGIN</plat-button>
+            <plat-button type="submit" class="button-primary gs-button" plat-tap="login()">LOGIN</plat-button>
+            <plat-button plat-tap="logOut" class="button-danger" >DONT DELETE LOG OUT</plat-button>
         </form>
     </div>
+     
 </div>
 

@@ -21,19 +21,14 @@ declare module models {
 }
 
 declare module contexts {
-    interface ILogin {
-        email: string;
-        password: string;
-        error: string;
-    }
 
     interface IRegister {
         firstname: string;
         lastname: string;
-        email: string;
+        email:string;
+        username: string;
         password: string;
         error: string;
-        // homeView: any;
     }
     
     interface IHome {
