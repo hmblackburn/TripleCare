@@ -12,7 +12,9 @@ export default class NavbarTemplateControl extends ui.TemplateControl {
       loggedin: false
     }
 
+
     initialize(): void {
+      this.hasOwnContext = true;
       this.on('navigated', (ev: events.DispatchEvent, utils: web.UrlUtils) => {
         this.drawerController.control.close();
         if (utils.pathname.indexOf('/register') === 0){

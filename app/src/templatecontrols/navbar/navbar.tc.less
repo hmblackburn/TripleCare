@@ -17,6 +17,7 @@
 /// ====== Basic Navbar Layout =======
 
 .navbar {
+
 	height:@nav-height;
 	background-color: rgba(255, 255, 255, 0.75);
 	width: 100%;
@@ -31,35 +32,36 @@
 }
 @media (min-width: 1001px){
 
-.drawer{
+	.drawer{
 	display: none;
-}
-.navbar {
-	display: flex;
+	}
+	.navbar {
+	#platui > #mixins > .flexbox();
+	#platui > #mixins > .justify-content(space-between);
+	#platui > #mixins > .align-items(center);
 
-}
 	.logo{
 	height:@logo-height;
 	width: 14em;
 	margin-left: 1.5em;
 	}
+		.nav-list{
+		position: relative;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: right;
 
-	.nav-list{
-	position: relative;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	text-align: right;
-
-		.flexitem{
-		display: inline-block;
-		margin-left: 1em;
-		font-size: @font;
-		font-family: 'Lato';
-		font-style: normal;
-		color: rgba(69, 71, 55, 0.8);
-		font-weight: 900;
-		// text-align: center;
+			.flexitem {
+			display: inline-block;
+			font-size: @font;
+			font-family: 'Lato';
+			font-style: normal;
+			color: rgba(69, 71, 55, 0.8);
+			font-weight: 900;
+			padding-right: 0.7em;
+			// text-align: center;
+			}
 		}
 	}
 }
@@ -87,15 +89,16 @@
 display:none;
 }
 .flexbox1{
-	justify-content: space-between;
-	display: flex;
+	#platui > #mixins > .flexbox();
+	#platui > #mixins > .justify-content(space-between);
+	#platui > #mixins > .align-items(center);
 }
 		.mobilelogo{
 height: @logo-height;
 		}
 			.drawerholder{
-
-				display: inline-block;
+				//padding: 1.5em 1.5em 0em 0em;
+				padding-right: 1em;
 				.navbaricon {
 
 				.manipulate{
