@@ -17,8 +17,8 @@ export default class RegisterViewControl extends BaseViewControl {
       password: '',
       error: ''
   }
+  
 
-      
   register(): void {
       this.context.error = '';
       this.userRepository.register(this.context.email,
