@@ -15,12 +15,7 @@ export default class RegisterViewControl extends BaseViewControl {
       lastname: '',
       email: '',
       password: '',
-      error: '',
-<<<<<<< HEAD
-
-=======
-      // homeView: HomeViewControl
->>>>>>> 7ffe450ca14c83412a89c822acc9634269ed136c
+      error: ''
   }
 
       
@@ -36,6 +31,5 @@ export default class RegisterViewControl extends BaseViewControl {
           this.context.error = error;
       });
   }
-
 }
 register.viewControl('register-vc', RegisterViewControl, [UserRepository]);

@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="dist/app.css">
-        <title>Triple Care</title>
-    </head>
-    <body>
-      <plat-drawer class="drawer" plat-options="{ position: 'right'}">
-          <plat-link class="drawer-links" plat-options="{view: 'home-vc'}"><li>HOME</li></plat-link>
-          <plat-link class="drawer-links" plat-options="{view: 'services-vc'}"><li>SERVICES</li></plat-link>
-          <plat-link class="drawer-links" plat-options="{view: 'calendar-vc'}" plat-visible="{{loggedin}}"><li>CALENDAR</li></plat-link>
-          <plat-link class="drawer-links"plat-options="{view: 'contact-vc'}"><li>CONTACT US</li></plat-link>
-          <plat-link class="drawer-links" plat-options="{view:'register-vc'}" plat-visible="{{!loggedin}}"><li>LOG IN</li></plat-link>
-          <li class="drawer-links"  plat-options="" plat-tap="logOut()" class="draweritem" plat-visible="{{loggedin}}">LOG OUT</li>
-      </plat-drawer>
-      <div class="app">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/app.css">
+    <title>Triple Care</title>
+</head>
+
+<body>
+    <plat-drawer class="drawer" plat-options="{ position: 'right'}">
+        <plat-link class="drawer-links" plat-options="{view: 'home-vc'}">
+            <li>HOME</li>
+        </plat-link>
+        <plat-link class="drawer-links" plat-options="{view: 'services-vc'}">
+            <li>SERVICES</li>
+        </plat-link>
+        <plat-link class="drawer-links" plat-options="{view: 'calendar-vc'}" plat-visible="{{loggedin}}">
+            <li>CALENDAR</li>
+        </plat-link>
+        <plat-link class="drawer-links" plat-options="{view: 'contact-vc'}">
+            <li>CONTACT US</li>
+        </plat-link>
+        <plat-link class="drawer-links" plat-options="{view:'register-vc'}" plat-visible="{{!loggedin}}">
+            <li>LOG IN</li>
+        </plat-link>
+        <li class="drawer-links" plat-options="" plat-tap="logOut()" class="draweritem" plat-visible="{{loggedin}}">LOG OUT</li>
+    </plat-drawer>
+    <div class="app">
         <navbar></navbar>
         <plat-viewport></plat-viewport>
-      </div>
-        <script type="text/javascript" src="dist/app.js"></script>
-    </body>
+    </div>
+    <script type="text/javascript">
+    </script>
+    <script type="text/javascript" src="dist/app.js"></script>
+    
+</body>
+
 </html>
