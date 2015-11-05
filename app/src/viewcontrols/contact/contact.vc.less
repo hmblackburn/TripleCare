@@ -35,11 +35,19 @@
 	margin: auto;
 	box-sizing: border-box;
 }
-.sub-button {
+    .gs-button {
+        margin: auto;
+        width: 40%;
+        border-width: 0;
+        text-transform: uppercase;
 
-	height:2.5em;
-	width: 5.3125em;
-	padding: 0.625em;
-	margin: auto;
+        &.button-primary {
+            background-color: @dark-grey;
+
+            &:active {
+                background-color: darken(@dark-grey, 5%);
+            }
+        }
 }
-}
+    }
+
