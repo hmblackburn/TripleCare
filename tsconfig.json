@@ -17,22 +17,22 @@
         "typings/tsd.d.ts"
     ],
     "files": [
-        "app/src/app/app.ts",
-        "app/src/main.ts",
+        "typings/tsd.d.ts",
         "app/src/models/models.d.ts",
+        "app/src/app/app.ts",
         "app/src/repositories/base/base.repo.ts",
         "app/src/repositories/user/user.repo.ts",
         "app/src/services/base/base.svc.ts",
         "app/src/services/user/user.svc.ts",
         "app/src/templatecontrols/footer/footer.tc.ts",
-        "app/src/templatecontrols/navbar/navbar.tc.ts",
+        "app/src/main.ts",
         "app/src/viewcontrols/base/base.vc.ts",
         "app/src/viewcontrols/calendar/calendar.vc.ts",
         "app/src/viewcontrols/contact/contact.vc.ts",
         "app/src/viewcontrols/home/home.vc.ts",
         "app/src/viewcontrols/register/register.vc.ts",
         "app/src/viewcontrols/services/services.vc.ts",
-        "typings/tsd.d.ts"
+        "app/src/templatecontrols/navbar/navbar.tc.ts"
     ],
     "exclude": []
 }
