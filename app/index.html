@@ -24,10 +24,10 @@
         <plat-link class="drawer-links" plat-options="{view: 'contact-vc'}">
             <li>CONTACT US</li>
         </plat-link>
-        <plat-link class="drawer-links" plat-tap="toggleNavbar()"plat-options="{view:'register-vc'}" plat-visible="{{!loggedin}}">
+        <plat-link class="drawer-links" plat-options="{view:'register-vc'}" plat-visible="{{!loggedin}}">
             <li>LOG IN</li>
         </plat-link>
-        <li class="drawer-links" plat-options="" plat-tap="logOut()" class="draweritem" plat-visible="{{loggedin}}">LOG OUT</li>
+        <li class="drawer-links" plat-options="{view: 'home-vc'}" plat-tap="logOut()" class="draweritem" plat-visible="{{loggedin}}">LOG OUT</li>
     </plat-drawer>
     <div class="app">
         <navbar></navbar>
