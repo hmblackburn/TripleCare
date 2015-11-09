@@ -7,11 +7,6 @@ export default class NavbarTemplateControl extends ui.TemplateControl {
     drawerController: controls.INamedElement<HTMLDivElement, DrawerController>;
     burg: controls.INamedElement<HTMLDivElement, any>;
 
-    protected static _inject: any = {
-        config: web.IBrowserConfig
-    };
-    config: web.IBrowserConfig;
-
     context: any = {
       showNavbar: true,
       loggedin: false
@@ -23,7 +18,6 @@ export default class NavbarTemplateControl extends ui.TemplateControl {
      this.on('navigated', (ev: events.DispatchEvent, utils: web.UrlUtils) => {
        this.drawerController.control.close();
        this.burg.element.className = "close";
-       this.toggleNavbar();
      });
 
       // this.on('navigated', () => {
@@ -37,36 +31,27 @@ export default class NavbarTemplateControl extends ui.TemplateControl {
       // });
     };
 
-    loaded() {
-      console.log(this.config);
-      console.log(this.config.baseUrl);
-      this.toggleNavbar();
-    }
-
 
     open() {
       this.burg.element.className = "open";
     }
 
-    toggleNavbar() {
-        //this.context.showNavbar = !this.context.showNavbar;
-        // window.onunload = unloadPage;
-        // function unloadPage() {
-        //   this.context.showNavbar = !this.context.showNavbar;
-        // }
-        console.log(this.config.baseUrl);
-        if (this.config.baseUrl.indexOf('/register') === 0){
-          this.context.showNavbar = false;
-         } else {
-          this.context.showNavbar = true;
-        }
-
+    login() {
+      console.log('inside navbar tc. Setting loggedin to true');
+      this.context.loggedin = true;
     }
     logOut(){
-       this.context.loggedin = !this.context.loggedin;
+      console.log('inside navbar tc. Setting loggedin to false');
+      this.context.loggedin = false;
+    }
+    
+    hideNavbar(){
+      this.context.showNavbar = false;
     }
 
+    showNavbar(){
+      this.context.showNavbar = true;
+    }
 
 }
-
-register.control('navbar', NavbarTemplateControl);
+register.control('navbar', NavbarTemplateControl, [], true);
