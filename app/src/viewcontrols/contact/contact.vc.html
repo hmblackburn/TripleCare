@@ -1,13 +1,13 @@
 <div class="contact-background">
 	<div class="empty-top"></div>
-	<form plat-submit="saveContact()">
+	<div>
 		<div class="login-info col-dsk-12 col-phn-12 flexbox">
 			<plat-input class="input custom-input" type="text" name="name" placeholder="NAME" plat-bind="customer.name"></plat-input>
 			<plat-input class="input custom-input" type="email" name="email" placeholder="EMAIL" plat-bind="customer.email"></plat-input>
 			<textarea class="input custom-input" name="comment" placeholder="MESSAGE" plat-bind="customer.comment"></textarea>
 			<br>
-			<plat-button class="button-primary gs-button">SUBMIT</plat-button>
+			<plat-button class="button-primary gs-button" plat-tap="saveContact()">SUBMIT</plat-button>
 		</div>
-	</form>
+	</div>
 </div>
 
