@@ -1,3 +1,4 @@
+/// <reference path="../../../../typings/parse/parse.d.ts"/>
 import {register} from 'platypus';
 import BaseViewControl from '../base/base.vc';
 import UserRepository from '../../repositories/user/user.repo';

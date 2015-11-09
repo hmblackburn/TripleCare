@@ -22,6 +22,7 @@ export default class RegisterViewControl extends BaseViewControl {
     }
 
   login(){
+    this.context.error = '';
     Parse.User.logIn(this.context.username, this.context.password)
     .then((success) => {
         this.navbar.login();
