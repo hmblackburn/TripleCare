@@ -1,0 +1,21 @@
+
+ <plat-drawer class="drawer" plat-options="{ position: 'right'}">
+        <plat-link class="drawer-links" plat-options="{view: 'home-vc'}">
+            <li>HOME</li>
+        </plat-link>
+        <plat-link class="drawer-links" plat-options="{view: 'services-vc'}">
+            <li>SERVICES</li>
+        </plat-link>
+        <plat-link class="drawer-links" plat-options="{view: 'calendar-vc'}" plat-visible="{{loggedin}}">
+            <li>CALENDAR</li>
+        </plat-link>
+        <plat-link class="drawer-links" plat-options="{view: 'contact-vc'}">
+            <li>CONTACT US</li>
+        </plat-link>
+        <plat-link class="drawer-links" plat-options="{view:'register-vc'}" plat-visible="{{!loggedin}}">
+            <li>LOG IN</li>
+        </plat-link>
+        <plat-link class="drawer-links" plat-options="{view: 'home-vc'}" plat-tap="logOut()" class="draweritem" plat-visible="{{loggedin}}">
+            <li>LOG OUT</li>
+            </plat-link>
+    </plat-drawer>

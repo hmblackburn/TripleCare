@@ -5,7 +5,7 @@ import HomeViewControl from '../home/home.vc';
 import CalendarViewControl from '../calendar/calendar.vc';
 import UserRepository from '../../repositories/user/user.repo';
 import NavbarTemplateControl from '../../templatecontrols/navbar/navbar.tc';
-
+import DrawerTemplateControl from '../../templatecontrols/drawer/drawer.tc';
 export default class RegisterViewControl extends BaseViewControl {
     templateString: string = require('./register.vc.html');
     context: contexts.IRegister = {
@@ -17,7 +17,7 @@ export default class RegisterViewControl extends BaseViewControl {
         username:''
     }
 
-    constructor(private userRepository: UserRepository, private navbar: NavbarTemplateControl) {
+    constructor(private userRepository: UserRepository, private navbar: NavbarTemplateControl, private drawer: DrawerTemplateControl) {
       super();
     }
 
@@ -26,6 +26,7 @@ export default class RegisterViewControl extends BaseViewControl {
     Parse.User.logIn(this.context.username, this.context.password)
     .then((success) => {
         this.navbar.login();
+        this.drawer.login();
         this.navigator.navigate(CalendarViewControl);
     }, (err: any) => {
       console.error(err);
@@ -46,8 +47,9 @@ export default class RegisterViewControl extends BaseViewControl {
   
   logOut(){
     this.navbar.logOut();
+    this.drawer.logOut();
     Parse.User.logOut();
   }
 
 }
-register.viewControl('register-vc', RegisterViewControl, [UserRepository, 'navbar']);
+register.viewControl('register-vc', RegisterViewControl, [UserRepository, 'navbar', 'drawer']);
