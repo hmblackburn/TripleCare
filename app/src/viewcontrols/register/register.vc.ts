@@ -17,6 +17,7 @@ export default class RegisterViewControl extends BaseViewControl {
         username:''
     }
 
+
     constructor(private userRepository: UserRepository, private navbar: NavbarTemplateControl, private drawer: DrawerTemplateControl) {
       super();
     }
