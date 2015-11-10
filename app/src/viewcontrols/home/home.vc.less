@@ -8,8 +8,8 @@
   @arrow-right: "\e817";
           
 .carousel {
-  position: absolute;
-  height: 50em;
+  position: fixed;
+  height: 100%;
   width: 100%;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@
   white-space: normal;
 }
 .carousel-image {
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
 	-webkit-background-size: cover;
@@ -29,5 +29,9 @@
   min-width: 100%;
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
 }

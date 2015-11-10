@@ -27,6 +27,10 @@ export default class CalendarViewControl extends BaseViewControl {
         this.context.customerInfo.extra='';
         this.context.customerInfo.extrathree='';
     }
+    
+    
+    
 }
-
 register.viewControl('calendar-vc', CalendarViewControl);
+
+
