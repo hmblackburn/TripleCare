@@ -7,7 +7,7 @@
 
 @font: 14pt;
 @nav-height: 5em;
-@logo-height:4.5em;
+@logo-height:7em;
 
 
 /// ====== Base Element Styling =======
@@ -42,7 +42,7 @@
 
 	.logo{
 	height:@logo-height;
-	width: 14em;
+	width: 16em;
 	margin-left: 1.5em;
 	}
 		.nav-list{
@@ -55,15 +55,20 @@
 			.flexitem {
 			display: inline-block;
 			font-size: @font;
-			font-family: 'Lato';
+			// font-family: 'Lato';
 			font-style: normal;
 			color: rgba(69, 71, 55, 0.8);
-			font-weight: 900;
-			padding-right: 0.7em;
+			font-weight: 400;
+			padding-right: 0.8em;
 			// text-align: center;
+			
 			}
 		}
 	}
+}
+li:hover{
+	color: #7f9e00 !important;
+	font-weight: 900 !important;
 }
 
 ///////////////////////Drawer and items under 1000px///////////////
