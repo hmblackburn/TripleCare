@@ -9,7 +9,6 @@
 		min-width: 100%;
 		height: auto;
 		width: 100%;
-		// padding-top: 1em;
 		position: absolute;
 		text-align: center;
 		top: 0;
@@ -40,7 +39,17 @@
 		border: 0;
 		opacity: .7;
 	}
-	.services-images:hover{
-			background-color: rgba(255,255,255,0.25);
-		}
+	@keyframes zRotate2 {
+        0%   {transform: rotateZ(0deg);}
+        25%   {transform: rotateZ(-25deg);}
+        50%   {transform: rotateZ(0deg);}
+        75%   {transform: rotateZ(25deg);}        
+        100%   {transform: rotateZ(0deg);}
+     }
+    .services-images:hover{    
+            animation-name: zRotate2;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+	}
 }

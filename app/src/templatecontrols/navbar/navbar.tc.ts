@@ -1,5 +1,9 @@
 import {controls, events, register, ui, web} from 'platypus';
 import RegisterViewControl from '../../viewcontrols/register/register.vc';
+import HomeViewControl from '../../viewcontrols/home/home.vc';
+import CalendarViewControl from '../../viewcontrols/calendar/calendar.vc';
+import ContactViewControl from '../../viewcontrols/contact/contact.vc';
+import ServicesViewControl from '../../viewcontrols/services/services.vc';
 import {DrawerController} from 'platypusui';
 
 export default class NavbarTemplateControl extends ui.TemplateControl {
@@ -9,7 +13,8 @@ export default class NavbarTemplateControl extends ui.TemplateControl {
 
     context: any = {
       showNavbar: true,
-      loggedin: false
+      loggedin: false,
+      currentPage: ''
     }
 
 
@@ -30,8 +35,7 @@ export default class NavbarTemplateControl extends ui.TemplateControl {
       // }
       // });
     };
-
-
+   
     open() {
       this.burg.element.className = "open";
     }
