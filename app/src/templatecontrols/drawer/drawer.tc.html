@@ -1,21 +1,21 @@
 
  <plat-drawer class="drawer" plat-options="{ position: 'right'}">
         <plat-link class="drawer-links" plat-options="{view: 'home-vc'}">
-            <li>HOME</li>
+            <li class="flextab">HOME</li>
         </plat-link>
         <plat-link class="drawer-links" plat-options="{view: 'services-vc'}">
-            <li>SERVICES</li>
+            <li class="flextab">SERVICES</li>
         </plat-link>
         <plat-link class="drawer-links" plat-options="{view: 'calendar-vc'}" plat-visible="{{loggedin}}">
-            <li>CALENDAR</li>
+            <li class="flextab">CALENDAR</li>
         </plat-link>
         <plat-link class="drawer-links" plat-options="{view: 'contact-vc'}">
-            <li>CONTACT US</li>
+            <li class="flextab">CONTACT US</li>
         </plat-link>
         <plat-link class="drawer-links" plat-options="{view:'register-vc'}" plat-visible="{{!loggedin}}">
-            <li>LOG IN</li>
+            <li class="flextab">LOG IN</li>
         </plat-link>
         <plat-link class="drawer-links" plat-options="{view: 'home-vc'}" plat-tap="logOut()" class="draweritem" plat-visible="{{loggedin}}">
-            <li>LOG OUT</li>
+            <li class="flextab">LOG OUT</li>
             </plat-link>
     </plat-drawer>
