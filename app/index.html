@@ -11,24 +11,7 @@
 </head>
 
 <body>
-    <plat-drawer class="drawer" plat-options="{ position: 'right'}" plat-visible="{{showNavbar}}">
-        <plat-link class="drawer-links" plat-options="{view: 'home-vc'}">
-            <li>HOME</li>
-        </plat-link>
-        <plat-link class="drawer-links" plat-options="{view: 'services-vc'}">
-            <li>SERVICES</li>
-        </plat-link>
-        <plat-link class="drawer-links" plat-options="{view: 'calendar-vc'}" plat-visible="{{loggedin}}">
-            <li>CALENDAR</li>
-        </plat-link>
-        <plat-link class="drawer-links" plat-options="{view: 'contact-vc'}">
-            <li>CONTACT US</li>
-        </plat-link>
-        <plat-link class="drawer-links" plat-options="{view:'register-vc'}" plat-visible="{{!loggedin}}">
-            <li>LOG IN</li>
-        </plat-link>
-        <li class="drawer-links" plat-options="{view: 'home-vc'}" plat-tap="logOut()" class="draweritem" plat-visible="{{loggedin}}">LOG OUT</li>
-    </plat-drawer>
+    <drawer></drawer>
     <div class="app">
         <navbar></navbar>
         <plat-viewport></plat-viewport>

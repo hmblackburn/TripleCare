@@ -25,16 +25,22 @@
   top: 0;
   left: 0;
 }	
-.flexbox {
+.flexbox-column {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
 }
+.flexbox-row {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
 .login-info {
 	background-color: rgba(255, 255, 255, 0.75);
-	padding: .5em 0 1em .5em;
+	padding: 1em 0 1em .5em;
 	margin: auto;
 	box-sizing: border-box;
+    height: 100%;
 }
     .gs-button {
         margin: auto;
@@ -53,5 +59,18 @@
  textarea{
 	height: 8em;
  }
+	.contact-images{
+        height: 32px;
+        width: 32px;
+		display: inline-block;
+        padding-bottom: .5em;
+        padding-right: .5em;
+		vertical-align: middle;
+		opacity: .7;
+	}
+    h4 {
+        color: @dark-grey;
+        padding-right: 2em;
+    }
 }
 
