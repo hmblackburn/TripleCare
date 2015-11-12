@@ -14,6 +14,7 @@ export default class NavbarTemplateControl extends ui.TemplateControl {
     context: any = {
       showNavbar: true,
       loggedin: false,
+      showDrawer: true,
       currentPage: ''
     }
 
@@ -52,10 +53,17 @@ export default class NavbarTemplateControl extends ui.TemplateControl {
     hideNavbar(){
       this.context.showNavbar = false;
     }
+    
+    hideDrawer(){
+      this.context.showDrawer = false;
+    }
 
     showNavbar(){
       this.context.showNavbar = true;
     }
-
+    
+    showDrawer(){
+      this.context.showDrawer = true;
+    }
 }
 register.control('navbar', NavbarTemplateControl, [], true);
