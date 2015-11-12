@@ -39,11 +39,13 @@ export default class RegisterViewControl extends BaseViewControl {
   navigatedTo(){
     console.log('navigate to works')
     this.navbar.hideNavbar();
+    this.navbar.hideDrawer();
   }
   
   navigatingFrom(){
     console.log('navigate from works')
     this.navbar.showNavbar();
+    this.navbar.showDrawer();
   }
   
   logOut(){
