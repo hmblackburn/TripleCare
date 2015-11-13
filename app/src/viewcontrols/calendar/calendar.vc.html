@@ -1,34 +1,5 @@
 <div class="calendar flexBox">
-<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTz=0&amp;height=800&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=haley.blackburn1%40gmail.com&amp;color=%2329527A&amp;ctz=America%2FChicago" 
-style="border-width:0" width="1200" height="800" frameborder="0" scrolling="no"></iframe>
-</div>
-<!-- The Modal -->
-<plat-modal plat-options="{ transition: 'fade' }" plat-bind="showInfo" class="modal-prompt">
-	<div class="prompt-title">Daily Schedule</div>
-	<div class="prompt-body">
-		<ul plat-visible="{{showInfo}}" class="customer-info flexBox">
-			<plat-input class="input custom-input" type="text" name="name" placeholder="Name" plat-bind="customerInfo.name"></plat-input>
-			<plat-input class="input custom-input" type="text" name="address" placeholder="Address" plat-bind="customerInfo.address"></plat-input>
-			<plat-input class="input custom-input" type="text" name="info" placeholder="Info:" plat-bind="customerInfo.info"></plat-input>
-			<plat-input class="input custom-input" type="text" name="info-extra-two" placeholder="" plat-bind="customerInfo.extra"></plat-input>
-			<plat-input class="input custom-input" type="text" name="info-extra-three" placeholder="" plat-bind="customerInfo.extrathree"></plat-input>
-		</ul>
-	</div>
-	<div class="prompt-action button-group">
-		<plat-button plat-tap="hideInfoModal()">Cancel</plat-button>
-		<plat-button class="button-suggested" plat-tap="toggleModal('modal3')">Continue</plat-button>
-	</div>
-</plat-modal>
-
-<div class="page-wrapper">
-	<div class="empty-top"></div>
-	<div class="month-container flexBox">
-		<div class="week" plat-tap="displayInfoModal()">
-			<li class="month-day">
-				<h2>1</h2></li>
-		</div>
-	</div>
-</div>
+<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=haley.blackburn1%40gmail.com&amp;color=%2329527A&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FChicago" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 
 
