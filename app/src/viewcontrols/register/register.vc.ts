@@ -32,9 +32,6 @@ export default class RegisterViewControl extends BaseViewControl {
     }, (err: any) => {
       console.error(err);
     });
-    // console.log(this.navbar.context);
-    // console.log(this.navbar.context.loggedin);
-    // console.log(this.navbar.context.loggedin);
   }
   navigatedTo(){
     console.log('navigate to works')
